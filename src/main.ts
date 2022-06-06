@@ -29,11 +29,11 @@ taskForm?.addEventListener("submit", (e) => {
   title.focus();
 
   Toastify({
-    text: "Task Saved",
+    text: "Tarea guardada",
   }).showToast();
 });
 
-// Load tasks from localstorage when the app loads
+// Carga de tareas desde el local storage
 document.addEventListener("DOMContentLoaded", () => {
   tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
   renderTasks(tasks);
@@ -55,7 +55,7 @@ function renderTasks(tasks: Task[]) {
     header.append(title);
 
     const btnDelete = document.createElement("button");
-    btnDelete.innerText = "delete";
+    btnDelete.innerText = "Borrar";
     btnDelete.className = "bg-red-500 px-2 py-1 rounded-md";
     header.append(btnDelete);
 
